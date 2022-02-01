@@ -1,4 +1,4 @@
-package com.scio.test.framework.domain;
+package com.scio.test.domain;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

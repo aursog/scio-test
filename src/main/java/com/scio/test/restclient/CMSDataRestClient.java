@@ -1,11 +1,10 @@
-package com.scio.test.framework.restclient;
+package com.scio.test.restclient;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.scio.test.framework.domain.CMSDataInput;
+import com.scio.test.domain.CMSDataInput;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 

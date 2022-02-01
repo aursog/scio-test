@@ -1,4 +1,4 @@
-package com.scio.test.framework.config;
+package com.scio.test.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

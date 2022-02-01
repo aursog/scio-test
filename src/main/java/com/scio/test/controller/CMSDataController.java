@@ -1,8 +1,8 @@
-package com.scio.test.framework.web;
+package com.scio.test.controller;
 
-import com.scio.test.application.services.CMSDataService;
+import com.scio.test.services.CMSDataService;
 import com.scio.test.entity.CMSData;
-import com.scio.test.framework.domain.CMSDataOutput;
+import com.scio.test.domain.CMSDataOutput;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

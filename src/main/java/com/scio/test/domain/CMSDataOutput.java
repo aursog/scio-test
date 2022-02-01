@@ -1,4 +1,4 @@
-package com.scio.test.framework.domain;
+package com.scio.test.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,8 +1,6 @@
-package com.scio.test.framework.config;
+package com.scio.test.config;
 
-import com.scio.test.application.interfaces.CMSDataInterface;
-import com.scio.test.framework.adapter.CMSDataAdapter;
-import com.scio.test.framework.restclient.CMSDataRestClient;
+import com.scio.test.restclient.CMSDataRestClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -29,8 +27,4 @@ public class RestTemplateConfig extends SpringConfig {
         return new CMSDataRestClient(restTemplate(), url);
     }
 
-    @Bean
-    public CMSDataInterface cmsDataAdapter() {
-        return new CMSDataAdapter(cmsDataRestClient(), super.modelMapper());
-    }
 }
