@@ -31,10 +31,14 @@ public class CMSDataService {
         List<CMSData> allData = cmsDataAdapter.getCMSData();
         Integer filterYear = year == null ? DEFAULT_YEAR : year;
 
-        return allData.stream()
-                .filter(data -> data.getPeriod() != null && data.getPeriod().equals(filterYear))
-                .sorted(Comparator.comparing(CMSData::getRegion).reversed())
-                .map(cmsDataAdapter::transformToOutput)
-                .collect(Collectors.toList());
+        if (allData != null) {
+            return allData.stream()
+                    .filter(data -> data.getPeriod() != null && data.getPeriod().equals(filterYear))
+                    .sorted(Comparator.comparing(CMSData::getRegion).reversed())
+                    .map(cmsDataAdapter::transformToOutput)
+                    .collect(Collectors.toList());
+        }
+
+        return null;
     }
 }
