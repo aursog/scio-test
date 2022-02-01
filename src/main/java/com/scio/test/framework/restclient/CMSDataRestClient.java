@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.scio.test.framework.domain.CMSDataInput;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,6 +25,7 @@ public class CMSDataRestClient {
         this.objectMapper = new ObjectMapper();
     }
 
+    @Cacheable("jsonResponse")
     public List<CMSDataInput> get() {
         ResponseEntity<String> jsonResponse = restTemplate.getForEntity(url, String.class);
 
